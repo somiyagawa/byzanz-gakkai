@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コプト語文書における誓約</title>
+    <style>
+        
+
+        body {
+            font-family: 'Antinoou','New Athena Unicode','Helvetica Neue',  'Noto Sans JP',Arial, sans-serif,;
+            font-size: 25px;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header .authors {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header .institutions {
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        
+        .container {
+            max-width: 2000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .section-number {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: #e67e22;
+            color: white;
+            font-weight: bold;
+            padding: 0.3rem 0.7rem;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            z-index: 2;
+        }
+        
+        .section-title {
+            background-color: #e67e22;
+            color: white;
+            padding: 1rem;
+            margin: -2rem -2rem 1.5rem -2rem;
+            border-radius: 8px 8px 0 0;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-top: -1rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .highlighted {
+            background-color: #fffacd;
+            padding: 0.2rem;
+            border-radius: 3px;
+        }
+        
+        .example {
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .coptic {
+            font-family: serif;
+            font-weight: bold;
+            color: #d35400;
+        }
+        
+        .note {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 1.5rem;
+        }
+        
+        h3 {
+            color: #2c3e50;
+            margin-top: 1.5rem;
+            border-bottom: 1px solid #e67e22;
+            padding-bottom: 0.5rem;
+        }
+        
+        ul, ol {
+            padding-left: 1.2rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        img {
+            max-width: 100%;
+            height: 100%;
+            border-radius: 0px;
+            margin: 0;
+            position: center;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .table-of-contents {
+            background-color: #f8f8f8;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .table-of-contents h3 {
+            margin-top: 0;
+            color: #e67e22;
+            text-align: center;
+            border-bottom: 2px solid #e67e22;
+            padding-bottom: 0.5rem;
+        }
+
+        .top-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: white;
+            background-color: #e67e22;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .top-link:hover {
+            background-color: #d35400;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            color: #7f8c8d;
+            background-color: #2c3e50;
+        }
+        
+        .total-sections {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+            color: #7f8c8d;
+            background-color: #f0f0f0;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+            color: #e67e22;
+        }
+        .field {
+            display: flex;
+            }
+    </style>
+</head>
+<body id="top">
+    <div class="header">
+        <h1>コプト語文書における誓約</h1>
+        <div class="authors">宮川創 ＆ モナ・サーウィ</div>
+        <div class="institutions">筑波大学（日本）　アシュート大学（エジプト）</div>
+    </div>
+    
+    <div class="container">
+        <div class="table-of-contents">
+            <h3>目次（全10セクション）</h3>
+            <ol>
+                <li><a href="#section1">セクション1: コプト語とは</a> - 古代エジプト語の最終段階</li>
+                <li><a href="#section2">セクション2: 古代エジプトの誓約</a> - 前コプト期の誓約の特徴</li>
+                <li><a href="#section3">セクション3: 歴史的背景</a> - 誓約の歴史的文脈</li>
+                <li><a href="#section4">セクション4: 用語と使用法</a> - コプト語における誓約関連用語</li>
+                <li><a href="#section5">セクション5: 誓約の機能的分類</a> - 断言的誓約と約束的誓約</li>
+                <li><a href="#section6">セクション6: コプト語誓約の定型表現</a> - 誓約の言語的構造</li>
+                <li><a href="#section7">セクション7: 法的文書における誓約</a> - 法的コンテキストでの使用</li>
+                <li><a href="#section8">セクション8: 聖人による誓約</a> - 宗教的要素</li>
+                <li>
+                    <a href="#section9">セクション9: アバドン——氏の天使と偽証への罰 </a> - 誓約の神秘的側面
+                </li>
+                <li><a href="#section10">セクション10: 結論</a> - 研究のまとめと展望</li>
+            </ol>
+            <div class="total-sections">スクロールして各セクションを順に読み進めてください</div>
+        </div>
+        
+        <div class="section" id="section1">
+            <div class="section-title">セクション1: コプト語とは？</div>
+            <div class="section-subtitle">古代エジプト語の発展における最終段階</div>
+            <div class="section-number">1/9</div>
+            
+            <div class="section-header">
+                <span class="section-icon">📚</span>
+                <h3>古代エジプト語の最終段階（世界最長の文字記録期間）</h3>
+            </div>
+            <img src="hieroglyph.png" width="2000" alt=""/>
+            <ul>
+                <li>古代エジプト語は<span class="highlighted">紀元前3200年頃</span>から記録が残る言語</li>
+                <li>コプト語はコプト文字（24のギリシャ文字＋6-8のデモティック文字）で書かれた変種で、<span class="highlighted">紀元3世紀頃</span>から標準化</li>
+                <li>現在までコプト正教会の典礼言語として残存</li>
+                <li>17世紀までに話し言葉として消滅したが、言語復興運動が存在</li>
+            </ul>
+            <img src="coptic.png" width="2000" alt=""/>
+            <div class="note">
+                コプト語は世界最長の文字記録期間を持つ古代エジプト語の最終段階として歴史言語学的に重要な位置を占めている。
+            </div>
+            
+            <!--             <a href="#top" class="top-link">▲ 目次に戻る</a> -->
+        </div>
+        
+        <div class="section" id="section2">
+            <div class="section-title">セクション2: 古代エジプトの誓約</div>
+            <div class="section-subtitle">前コプト期における誓約の基本的特徴</div>
+            <div class="section-number">2/9</div>
+            
+            <div class="section-header">
+                <span class="section-icon">⚖️</span>
+                <h3>古代エジプトにおける誓約の基本要素</h3>
+            </div>
+            
+            <ul>
+                <li><span class="highlighted">支配者の王、神々、あるいは両方の名</span>において誓う</li>
+                <li>宗教的、道徳的、社会的側面が融合</li>
+                <li>誠実さを保証するために高位の権威を呼び出す</li>
+                <li>誓約の<span class="highlighted">超自然的力</span>への信仰に基づく</li>
+                <li>神罰への恐怖を通じて偽証を防ぐことを目的とする</li>
+            </ul>
+            
+            <div class="note">
+                古代エジプトの誓約は、単なる言語行為ではなく、神聖な約束であり、社会秩序を維持する重要な手段でした。
+            </div>
+            <div class="image">
+                <div class="image-caption">古代エジプトの誓約のイメージ（『死者の書』）</div>
+                <div class="image-content"><img src="dead.png" alt=" "></div>
+            </div>
+            
+            <!--             <a href="#top" class="top-link">▲ 目次に戻る</a> -->
+        </div>
+        
+        <div class="section" id="section3">
+            <div class="section-title">セクション3: 歴史的背景</div>
+            <div class="section-subtitle">誓約の歴史的文脈と発展</div>
+            <div class="section-number">3/9</div>
+            
+            <div class="section-header">
+                <span class="section-icon">🏛️</span>
+                <h3>誓約の歴史的発展と影響</h3>
+            </div>
+            
+            <ul>
+                <li>古代エジプトの慣行
+                    <ul>
+                        <li>キリスト教以前の社会における誓約の役割</li>
+                    </ul>
+                </li>
+                <li>古代エジプトにおける誓約の用語
+                    <ul>
+                        <li><img src="anx.png"  alt=""/><span class="coptic">ᶜnḫ</span>（文字通り：「誓約を行う、遂行する」）</li>
+                        <li><img src="arq.png"  alt=""/><span class="coptic">ᶜrḳ</span>「誓う」（文字通り：「縛る」）</li>
+                    </ul>
+                </li>
+                <li>グレコ・ローマンの影響
+                    <ul>
+                        <li>文化交流を通じたコプト慣行への誓約の統合</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <div class="note">
+                コプト語の誓約は古代エジプトの伝統を継承しつつ、ギリシャ・ローマ文化との接触によって形成されました。
+            </div>
+            
+            <!--             <a href="#top" class="top-link">▲ 目次に戻る</a> -->
+        </div>
+        
+        <div class="section" id="section4">
+            <div class="section-title">セクション4: 用語と使用法</div>
+            <div class="section-subtitle">コプト語における誓約関連用語の語彙分析</div>
+            <div class="section-number">4/9</div>
+            
+            <div class="section-header">
+                <span class="section-icon">🔤</span>
+                <h3>コプト語の誓約に関する語彙</h3>
+            </div>
+            <div class="note">コプト語の方言による誓約関連用語の違い</div>
+            <img src="dialect.png" alt="コプト語の方言" width="500">
+          
+            <p>コプト語の誓約に関する用語は、方言によって異なる形を持つ：</p>
+            <p>コプト語で「誓約」と訳される単語は：</p>
+            <ul>
+                <li>（サイード方言、ボハイラ方言）<span class="coptic">ⲁⲛⲁϣ</span>、複数形：<span class="coptic">ⲁⲛⲁⲩϣ</span></li>
+                <li>（アクミム方言）<span class="coptic">ⲁⲛⲁⳉ</span></li>
+                <li>（ファイユーム方言）<span class="coptic">ⲁⲛⲉϣ</span>、<span class="coptic">ⲁⲛⲏϣ</span>、複数形：<span class="coptic">ⲁⲛⲏⲩϣ</span></li>
+            </ul>
+            <p>コプト語以前の古代エジプト語の同等語：<span class="coptic">ᶜnḫ</span></p>
+            
+            <div class="section-header">
+                <span class="section-icon">🗣️</span>
+                <h3>「誓う、誓約する」と訳される動詞</h3>
+            </div>
+            <ul>
+                <li><span class="coptic">ⲱⲣⲕ</span>「誓う」</li>
+                <li><span class="coptic">ⲧⲁⲣⲕⲟ</span>「誓わせる、懇願する」（&lt; 使役形 ḏj + ᶜrḳ）</li>
+                <li><span class="coptic">ϩⲟⲙⲟⲗⲟⲅⲉⲓ</span>「承認する」（ギリシャ語からの借用語）</li>
+            </ul>
+            <p>コプト語以前の古代エジプト語の同等語：<span class="coptic">
+              <img src="arq.png" alt=""/><span class="coptic">ᶜrḳ</span></p>
+           
+            
+            <div class="note">
+                コプト語の方言による語形の違いは、古代エジプト各地における誓約の概念の文化的重要性を示しています。
+            </div>
+            
+            <!--             <a href="#top" class="top-link">▲ 目次に戻る</a> -->
+        </div>
+        
+        <div class="section" id="section5">
+            <div class="section-title">セクション5: 誓約の機能的分類</div>
+            <div class="section-subtitle">断言的誓約と約束的誓約の分析</div>
+            <div class="section-number">5/9</div>
+            
+            <div class="section-header">
+                <span class="section-icon">🔍</span>
+                <h3>誓約の主要分類</h3>
+            </div>
+            <ul>
+                <li><span class="highlighted">断言的誓約</span>
+                    <ul>
+                        <li>法的：法廷や公式文書で使用</li>
+                        <li>非法的：日常的な真実の主張</li>
+                    </ul>
+                </li>
+                <li><span class="highlighted">約束的誓約</span>
+                    <ul>
+                        <li>法的：契約や協定における約束</li>
+                        <li>非法的：個人的な誓いや約束</li>
+                    </ul>
+                </li>
+            </ul>
+      
+            <div class="note">Massa (2018: 16)による分類</div>
+    
+            
+            <div class="section-header">
+                <span class="section-icon">📝</span>
+                <h3>断言的誓約の例</h3>
+            </div>
+            
+            <div class="example">
+                <p><span class="coptic">ⲉⲓϩⲟⲙⲟⲗⲟⲅⲉⲓ ⲉⲓⲱⲣ̅ ⲕ̅ ⲙⲡⲛⲟⲩⲧⲉ ⲡⲡⲁⲛⲧⲟⲕⲣⲁⲧⲱⲣ… ϫⲉ ⲡⲛ̅ ⲧⲁⲓⲧⲁⲁϥ ⲛⲁⲩ ⲁⲩⲧⲁⲁϥ ϩⲁⲣⲟⲓ̈ ⲟⲩⲙⲟⲛⲟⲛ̅</span></p>
+                <p>「私は<span class="highlighted">全能の神に誓い</span>...<span class="highlighted">私が彼らに与えたもの</span>は、<span class="highlighted">彼らが私のためだけに使った</span>ことを承認します。」（P. CLT 1.59-63）</p>
+            </div>
+            
+            <div class="section-header">
+                <span class="section-icon">📜</span>
+                <h3>約束的誓約の例</h3>
+            </div>
+            
+            <div class="example">
+                <p><span class="coptic">ⲉⲓⲱⲣⲕ ⲛⲧⲉⲧⲣⲓⲁⲥ ⲉⲧⲟⲩⲁⲁⲃ ⲛϩⲟⲙⲟⲟⲩⲥⲓⲟⲛ… ⲉⲧⲙⲧⲣⲉⲗⲁⲁⲩ ⲛⲡⲁⲣⲁⲃⲁⲥⲓⲥ ϣⲱⲡⲉ ⲛϩⲏⲧⲥ</span></p>
+                <p>「<span class="highlighted">私は聖なる同質の三位一体に誓う</span>...いかなる違反も起こらないこと。」（P.KRU 38. l.53）</p>
+            </div>
+            
+            <!--             <a href="#top" class="top-link">▲ 目次に戻る</a> -->
+        </div>
+        
+        <div class="section" id="section6">
+            <div class="section-title">セクション6: コプト語誓約の定型表現</div>
+            <div class="section-subtitle">誓約の言語的構造と形式分析</div>
+            <div class="section-number">6/9</div>
+            
+            <div class="section-header">
+                <span class="section-icon">📋</span>
+                <h3>誓約定型表現のバリエーション</h3>
+            </div>
+            
+            <p>コプト語の誓約定型表現は開始句にいくつかのバリエーションがある：</p>
+            <ul>
+                <li><span class="coptic">ⲉⲓⲱⲣⲉⲕ (ⲇⲉ) ⲛ-</span>「（そして）私は誓う」</li>
+                <li><span class="coptic">ⲙⲁⲗⲗⲟⲛ ⲉⲓⲱⲣⲉⲕ (ⲇⲉ) ⲛ-</span>「（そして）さらに私は誓う」</li>
+                <li><span class="coptic">ⲉⲓⲱⲣⲕ (ⲇⲉ) ⲙⲛⲛⲥⲱⲥ ⲛ-</span>「（そして）私はこの後誓う」</li>
+                <li><span class="coptic">ⲙⲛⲛⲥⲱⲥ ⲉⲓⲱⲣⲕ ⲛ-</span>「その後私は誓う」</li>
+                <li><span class="coptic">ⲉϫⲛⲛⲁⲓ ⲇⲉ ⲧⲏⲣⲟⲩ ⲉⲓⲱⲣⲕ ⲛ-</span>「そして何よりも私は誓う」</li>
+            </ul>
+            
+            <div class="section-header">
+                <span class="section-icon">🧩</span>
+                <h3>誓約の構造的特徴</h3>
+            </div>
+            
+            <ul>
+                <li>コプト語の誓約定型表現は二つの主要部分に分けられる：
+                    <ul>
+                        <li><span class="highlighted">誓いの動詞を含む初期の主節</span></li>
+                        <li><span class="highlighted">この動詞を完成させる引数節</span></li>
+                    </ul>
+                </li>
+                <li>主な動詞は<span class="coptic">ⲱⲣⲕ</span>「誓う」、動詞<span class="coptic">ⲧⲁⲣⲕⲟ</span>「懇願する」、動詞<span class="coptic">ϩⲟⲙⲟⲗⲟⲅⲉⲓ</span>「承認する」</li>
+            </ul>
+            
+            <div class="example">
+                <p><span class="coptic">ⲉⲓⲱⲣⲕ ⲇⲉ ⲙⲛⲛⲥⲱⲥ ⲙⲡⲛⲟⲩⲧⲉ ⲡⲡⲁⲛⲧⲟⲕⲣⲁⲧⲱⲣ</span>「そして私は<span class="highlighted">誓う</span>、この後に<span class="highlighted">全能の神に</span>...」（P.KRU 15.23-25）</p>
+                <p><span class="coptic">ⲉⲓⲧⲁⲣⲕⲟ ⲛⲁⲣⲭⲏ ⲛⲓⲙ ϩⲓⲉⲝⲟⲩⲥⲓⲁ</span>「私は<span class="highlighted">懇願する</span><span class="highlighted">すべての支配者とすべての権威に</span>...」（P.CLT 4.21）</p>
+            </div>
+            
+            <div class="note">
+                これらの定型表現は、法的文書で特に重要で、文書の効力と信頼性を確立する役割を果たしました。
+            </div>
+            
+            <!--             <a href="#top" class="top-link">▲ 目次に戻る</a> -->
+        </div>
+        
+        <div class="section" id="section7">
+            <div class="section-title">セクション7: 法的文書における誓約</div>
+            <div class="section-subtitle">法的・行政的文脈での誓約の使用</div>
+            <div class="section-number">7/9</div>
+            
+            <div class="section-header">
+                <span class="section-icon">⚖️</span>
+                <h3>法的文書の構造における誓約の位置</h3>
+            </div>
+            
+            <ul>
+                <li>誓約定型表現は通常、<span class="highlighted">罰則定型表現の後</span>、<span class="highlighted">証人証明の前</span>に置かれる</li>
+                <li>CLT 4、ジェメから、アパ・パウロス修道院のパン屋に設置された臼の全額支払いを受け取ったというメルクリオスによる解放証書</li>
+            </ul>
+            
+            <div class="section-header">
+                <span class="section-icon">📑</span>
+                <h3>法的文書における誓約の例（翻訳 CLT 4, Schiller 1932）</h3>
+            </div>
+            
+            <div class="example">
+                <p>「私はこの文書が彼の前に持ち出されるとき、すべての役人とすべての権力に誓います。全能の神と我々を支配する主君の主権によって、それは決して侵害されることはありません。あなたの父性の安全のために、私はあなたとあなたの後継者のために、それが存在し、有効であり、それが示されるすべての場所において拘束力を持つことを、それを書いた書記の署名と信頼できる証人の理由によって、上記に述べました。私はこの方法で約束します。」</p>
+                <p>「私、ペスィンティオスの息子フィロテオスは証人です。+ 私、エポイケのスアイの息子トマスは証人です。+ 私、司祭サムエルは証人です。+」</p>
+            </div>
+            <img src="law.png" width="1000"/>
+            <div class="section-header">
+                <span class="section-icon">💰</span>
+                <h3>財政紛争における誓約</h3>
+            </div>
+           
+            
+            <div class="example">
+                <p>O.Crum ad. 42より：</p>
+                <p>「<span class="highlighted">この場所と、その力によって！</span>キュリアコスがダニエル（彼の雇われ人）をヨセフの父親のところに送り、彼に半ソリドゥスを与え、レンズ豆に関して送ったことを確かに知っています。これはカレがヨセフのために、ヨセフの父親のための半ソリドゥスに関して誓った誓約です。コロウトス（首長）の前で、コイアク15日、インディクティオ15年。」（テキスト：W. E. クルム、訳：G. シェンケ）</p>
+            </div>
+            
+            <div class="note">
+                法的文書における誓約は、その文書の法的拘束力を強調し、違反した場合の神的・世俗的制裁を明示する機能を持っていた。
+            </div>
+
+            <div class="section-header">
+                <span class="section-icon">💰</span>
+                <h3>知事による誓約</h3>
+            </div>
+      
+    
+            <!--             <a href="#top" class="top-link">▲ 目次に戻る</a> -->
+        </div>
+
+
+<div class="section" id="section11">
+    <div class="section-title">セクション11: 総督による誓約</div>
+    <div class="section-subtitle">イスラム統治下のコプト社会における誓約慣行</div>
+    <div class="section-number">11/11</div>
+    
+    <div class="section-header">
+        <span class="section-icon">🕌</span>
+        <h3>英国博物館パピルス1079：アムル・イブン・アル＝アースに関する誓約</h3>
+    </div>
+    
+    <p>パピルス英国博物館1079は、エジプトを征服したイスラム軍の初代総督アムル・イブン・アル＝アース（ヒジュラ暦43年/西暦663年没）に関連するコプト語文書。</p>
+    
+    <img src="bm1079.png" width="1000" alt=""/>
+
+    <div class="section-header">
+        <span class="section-icon">📜</span>
+        <h3>公式誓約の内容</h3>
+    </div>
+    
+    <ul>
+        <li>文書はチネラ村の<span class="highlighted">村長フィロテオス</span>と他の村民による公式誓約を記録</li>
+        <li>「<span class="highlighted">神とアムルの安寧</span>にかけて誓う」という形式を採用</li>
+        <li>村内の<span class="highlighted">14歳以上のすべての男性</span>を数え上げたこと</li>
+        <li>当局への報告から<span class="highlighted">誰も除外していない</span>ことを誓約</li>
+    </ul>
+    
+    <div class="example">
+        <p><span class="coptic">ⲉⲓⲱⲣⲕ ⲙⲡⲛⲟⲩⲧⲉ ⲡⲁⲛⲧⲟⲅⲣⲁⲧⲱⲣ ⲙⲛⲡⲉⲩϫⲁⲓ ⲛⲁⲃⲣⲟⲥ</span></p>
+        <p>「私は<span class="highlighted">全能の神とアブロス（アムル）の安寧</span>にかけて誓う」</p>
+    </div>
+    
+    <div class="example">
+        <p><span class="coptic">ⲉⲛⲱⲣⲕ ⲙⲡⲛⲟⲩⲧⲉ ⲡⲁⲛⲧⲟⲅⲣⲁⲧⲱⲣ ⲙⲡⲣⲁⲛ ⲙⲡⲛⲟⲩⲧⲉ ⲙⲛⲡⲉⲩϫⲁⲓ ⲛⲁⲛⲃⲣⲟⲥ</span></p>
+        <p>「私たちは<span class="highlighted">全能の神と神の名とアブロス（アムル）の安寧</span>にかけて誓う」</p>
+    </div>
+    
+    <div class="section-header">
+        <span class="section-icon">🔍</span>
+        <h3>歴史的意義</h3>
+    </div>
+    
+    <ul>
+        <li>この文書は<span class="highlighted">初期キリスト教-イスラム関係</span>に関する貴重な洞察を提供</li>
+        <li>ムスリム総督の権威が<span class="highlighted">エジプト農村社会</span>にまで及んでいたことを示す</li>
+        <li>誓約形式にキリスト教的要素（全能の神への言及）と<span class="highlighted">イスラム支配の受容</span>（総督の安寧への言及）が混在</li>
+        <li>この種の国勢調査は<span class="highlighted">人頭税（ジズヤ）徴収</span>と労働徴用のために行われた可能性が高い</li>
+        <li>文書は征服後の<span class="highlighted">行政的連続性</span>と変化の両方を示している</li>
+    </ul>
+    
+    <div class="note">
+        この文書は、イスラム征服後も続いたコプト語の行政利用と、前イスラム時代からの誓約慣行の継続を示すとともに、新しい支配者を誓約に組み込むという適応の例を提供しています。この種の文書は、異なる宗教・文化間の相互作用と共存の方法を理解する上で重要な資料となります。
+    </div>
+    
+    <!--             <a href="#top" class="top-link">▲ 目次に戻る</a> -->
+</div>
+
+        
+        <div class="section" id="section8">
+            <div class="section-title">セクション8: 聖人による誓約</div>
+            <div class="section-subtitle">宗教的要素と聖人崇敬の関係</div>
+            <div class="section-number">8/9</div>
+            
+            <div class="section-header">
+                <span class="section-icon">✝️</span>
+                <h3>聖人の名による誓約</h3>
+            </div>
+            
+            <ul>
+                <li>P.Mon.Epiph. 162は6-7世紀の手紙で、テーベ（上エジプト）のエピファニオス修道院から出土</li>
+                <li>ヨハネという聖人の名による誓約が記録されている</li>
+            </ul>
+            
+            <div class="example">
+                <p><span class="coptic">ⲉⲁⲓⲱⲣⲕ ⲙⲡϩⲁⲅⲓⲟⲥ ⲱϩⲁⲛⲛⲏⲥ ϫⲉ ⲙⲁⲃⲱⲕ ⲉⲡϣⲙⲙⲟ</span></p>
+                <p>「私は<span class="highlighted">聖ヨハネによって誓った</span>、私は外国に行くことができないと」（Gesa Schenke, Cult of Saints, E02438）</p>
+            </div>
+            
+            <div class="section-header">
+                <span class="section-icon">⛪</span>
+                <h3>教会による誓約</h3>
+            </div>
+            
+            <div class="example">
+                <p><span class="coptic">ⲉⲓⲱⲣⲕ ⲙⲡⲛⲟⲩⲧⲉ ⲡⲡⲁⲛⲧⲱⲕⲣⲁⲧⲟⲣ ⲙⲛ ⲧⲕⲁⲑⲟⲗⲓⲕⲏ ⲛⲉⲕⲗⲏⲥⲓⲁ ⲙⲛ ⲡⲉⲩϫⲁ ⲙⲡⲉⲑⲣⲟⲛⲟⲥ ⲙⲡⲉⲛⲉⲓⲱⲧ ⲙⲁⲣⲕⲟⲥ ⲡⲉⲩⲁⲛⲕⲉⲗⲓⲥⲧⲏⲥ ϫⲉ ⲛⲛⲉ ⲉⲃⲟⲗ ⲉⲡⲓϩⲱⲃ ϣⲁ ⲉⲛⲉϩ</span></p>
+                <p>「私は<span class="highlighted">全能の神と普遍教会と我らが父である福音記者マルコスの玉座の安全</span>にかけて誓う、私は決してこの事柄に関して行動しないことを」（Gesa Schenke, Cult of Saints, E04038）</p>
+            </div>
+            
+            <div class="section-header">
+                <span class="section-icon">🔍</span>
+                <h3>聖人崇敬と誓約の関係</h3>
+            </div>
+            
+            <ul>
+                <li>コプト・キリスト教の中で<span class="highlighted">聖人は特別な仲介者</span>としての役割を担っていた</li>
+                <li>聖人の名による誓約は、その聖人の<span class="highlighted">霊的権威と保護</span>を求める行為</li>
+                <li>誓約を破ることは聖人に対する冒涜とみなされ、<span class="highlighted">超自然的な罰</span>を招くと信じられていた</li>
+                <li>聖人の祠や聖遺物の前で行われる誓約は特に神聖かつ拘束力が強いとされた</li>
+            </ul>
+            
+            <div class="section-header">
+                <span class="section-icon">📜</span>
+                <h3>コロウトス聖人の伝記における偽誓の例</h3>
+            </div>
+            
+            <div class="example">
+                <p>アンティノオポリスの医師・殉教者コロウトスの賛辞（7世紀）には、金貸しに騙そうとした書記の物語が含まれている。書記は聖コロウトスの前で偽証を行ったため、「偽りの誓いをした男は全身が膨れ上がり、太陽が沈む前に死んだ。彼は運び去られ埋葬された」という悲惨な結末を迎えた。</p>
+            </div>
+            
+            <div class="note">
+                聖人による誓約は、単なる法的手続きを超え、神聖な契約としての性格を持ち、コプト社会において誓約の神聖さと誠実さを強調する重要な手段でした。
+            </div>
+            
+            <!--             <a href="#top" class="top-link">▲ 目次に戻る</a> -->
+        </div>
+        <div class="section" id="section9">
+            <div class="section-title">セクション9: アバドン：死の天使と偽証への罰</div>
+            <div class="section-subtitle">偽誓と神罰の図像学的表現</div>
+            <div class="section-number">10/10</div>
+            
+            <div class="section-header">
+                <span class="section-icon">👹</span>
+                <h3>アバドンの図像表現</h3>
+            </div>
+            
+            <ul>
+                <li>おそらく<span class="highlighted">10世紀頃</span>の絵画</li>
+                <li>1899年に<span class="highlighted">ファイユームの教会</span>で発見された壁画</li>
+                <li>ワニのような顎を持つ<span class="highlighted">悪魔的な姿</span>で描かれている</li>
+                <li>壁画には<span class="highlighted">複数の罪人</span>への罰が描かれている</li>
+            </ul>
+            
+            <div class="section-header">
+                <span class="section-icon">⚖️</span>
+                <h3>偽証者への罰</h3>
+            </div>
+            
+            <div class="example">
+                <p><span class="coptic">ⲡⲉⲧⲟⲣⲉⲕ ⲛⲛⲟⲩϫ</span>「偽って誓う者」と書かれた人物が描かれており、アバドンがその腸を引き出している場面が示されている</p>
+            </div>
+            <img src="abaddon1.png" alt="アバドンの壁画" width="1000">
+            <p>この壁画には他にも「労働者から給料を奪う人」（<span class="coptic">ⲡⲣⲱⲙⲉ ⲉϥⲃⲓ ⲙⲡⲃⲩⲕⲏ ⲛⲛⲉⲣⲕⲁⲧⲏⲥ</span>）への罰も描かれており、社会的・宗教的規範に対する違反への超自然的罰を視覚的に表現している。</p>
+            
+            <div class="section-header">
+                <span class="section-icon">🔥</span>
+                <h3>神罰のコンセプト</h3>
+            </div>
+            <img src="abaddon2.png" alt="アバドンの壁画" width="1000">
+            <ul>
+                <li>アバドンは<span class="highlighted">聖書的概念</span>で、ヘブライ語で「破壊」を意味する</li>
+                <li>黙示録では<span class="highlighted">底なしの淵の天使</span>として登場（黙示録9:11）</li>
+                <li>コプト教会の伝統では<span class="highlighted">特定の罪に対する罰</span>を執行する存在として描かれる</li>
+                <li>特に<span class="highlighted">偽証・偽誓</span>は、神の名を冒涜する重大な罪として認識されていた</li>
+                <li>この図像表現は<span class="highlighted">社会的抑止力</span>として機能していたと考えられる</li>
+            </ul>
+            
+            <div class="section-header">
+                <span class="section-icon">🏺</span>
+                <h3>関連する壁画と写本</h3>
+            </div>
+            
+            <p>偽誓と神罰の関係性を示す類似の図像表現は、他のコプト修道院やパピルスにも見られる。特に<span class="highlighted">ハイデルベルク魔術パピルス</span>（P.Heid.Kopt. Inv. 686、10世紀）には、誓約違反に対する呪いと罰が詳細に記述されている。</p>
+            
+            <div class="note">
+                アバドンの図像は、誓約の神聖さと偽誓の重大性に関するコプト社会の認識を反映しており、単なる芸術表現ではなく、当時の人々の宗教的・法的意識を形作る教育的・警告的役割を果たしていたと考えられます。
+            </div>
+        </div>
+
+
+<div class="section" id="section12">
+    <div class="section-title">セクション12: 魔術と誓約</div>
+    <div class="section-subtitle">魔術的文脈における誓約の使用と機能</div>
+    <div class="section-number">12/12</div>
+    
+    <div class="section-header">
+        <span class="section-icon">✨</span>
+        <h3>P. Kell. Copt. 35：「主パラクレートによる誓約」</h3>
+    </div>
+    
+    <p>P. Kell. Copt. 35は、カップルを別れさせる目的の魔術呪文を含む手紙です。この文書は、魔術的文脈における誓約の使用方法と重要性を示す貴重な例です。</p>
+    
+    <div class="section-header">
+        <span class="section-icon">📝</span>
+        <h3>誓約を含む手紙の内容</h3>
+    </div>
+    
+    <div class="example">
+        <p><span class="coptic">ⲉⲓⲱⲣⲕ ⲛⲁⲕ ⲙⲡϫⲟⲉⲓⲥ ⲡⲡⲁⲣⲁⲕⲗⲏⲧⲟⲥ ⲙⲛ ⲡⲥⲟⲟⲩⲛ ⲛⲧⲙⲉ...</span></p>
+        <p>「私はあなたに<span class="highlighted">主パラクレートス（=マニ）と真理の知識にかけて誓います</span>...」</p>
+    </div><center>
+    <img src="kellis.png" alt="Kellis Papyri" width="1000"></center>
+    <p>手紙の著者はユダヤ教-キリスト教の神に祈りを捧げた後、呪文を書き、兄弟に宛てて次のように述べています：</p>
+    
+    <div class="example">
+        <p>「私はあなたに温かい挨拶を送り、長い間あなたの幸福を祈ります。私が再び肉体であなたを抱きしめ、私の喜びが完成するまで。<span class="highlighted">私は主パラクレートスと真理の知識にかけて誓います</span>。これは私の近くで見つけたものであり、急いでこれを書き、あなたに送りました。なぜなら、もう一つは小さなパピルスの断片に書かれており、私はそれを見つけることができなかったからです。」（キプリアノス・データベースより）</p>
+    </div>
+    
+    <div class="section-header">
+        <span class="section-icon">🔮</span>
+        <h3>マニ教魔術文書における誓約の役割</h3>
+    </div>
+    
+    <ul>
+        <li>魔術的文脈での誓約は<span class="highlighted">呪文の効力を高める</span>働きがある</li>
+        <li><span class="highlighted">神聖な力を呼び出す</span>ために使用される</li>
+        <li>呪文の<span class="highlighted">伝達の真正性</span>を保証する手段</li>
+        <li>魔術師と受け手の間の<span class="highlighted">信頼関係を強化</span>する</li>
+        <li>特に「パラクレートス（=マニ）」への言及は、<span class="highlighted">マニ教的要素</span>を示唆している</li>
+    </ul>
+
+
+
+    <div class="note">
+        P. Kell. Copt. 35は、コプト語文書において誓約が法的・行政的文脈だけでなく、魔術的・私的文脈でも重要な役割を果たしていたことを示しています。この種の魔術的誓約は、神聖な力を呼び出し、呪文の効力を保証し、魔術師の意図の真正性を示すために使用されていました。
+    </div>
+    
+    <!--             <a href="#top" class="top-link">▲ 目次に戻る</a> -->
+</div>
+        <div class="section" id="section10">
+            <div class="section-title">セクション10: 結論</div>
+            <div class="section-subtitle">研究のまとめと展望</div>
+            <div class="section-number">9/9</div>
+            
+            <div class="section-header">
+                <span class="section-icon">📋</span>
+                <h3>コプト語誓約の社会的・宗教的重要性</h3>
+            </div>
+            
+            <ul>
+                <li>コプト語文書における誓約は<span class="highlighted">古代エジプトの伝統</span>とグレコ・ローマン及びキリスト教の影響が融合した制度</li>
+                <li>法的文書では<span class="highlighted">契約の信頼性と拘束力</span>を確保する役割を担っていた</li>
+                <li>誓約の形式は<span class="highlighted">文脈によって多様</span>だが構造的特徴は一貫している</li>
+                <li>言語的形式は<span class="highlighted">複数の方言</span>に渡って確認され、文化的重要性を示している</li>
+                <li>誓約違反に対する<span class="highlighted">超自然的・世俗的制裁の恐怖</span>が社会秩序維持に貢献</li>
+                <li>聖人崇敬と誓約制度の<span class="highlighted">融合</span>はコプト・キリスト教独自の特徴</li>
+            </ul>
+            
+            <div class="section-header">
+                <span class="section-icon">🔮</span>
+                <h3>今後の研究展望</h3>
+            </div>
+            
+            <ul>
+                <li>未発表のコプト語パピルスや文書の<span class="highlighted">継続的発掘と解読</span></li>
+                <li>イスラム支配下における誓約慣行の<span class="highlighted">変容と継続性</span>の検証</li>
+                <li>ビザンティン帝国および中東の他のキリスト教共同体との<span class="highlighted">比較研究</span></li>
+                <li>誓約違反に対する超自然的罰の概念の<span class="highlighted">発展と変遷</span>の分析</li>
+                <li>コプト語誓約文書の<span class="highlighted">言語学的・文体的特徴</span>のさらなる研究</li>
+            </ul>
+            
+            <div class="note">
+                コプト語文書における誓約の研究は、古代エジプトから中世初期に至る法的・宗教的慣行の連続性と変化を理解する上で重要な視点を提供します。また、誓約という行為を通じて、当時の人々の信仰と社会的価値観を垣間見ることができます。
+            </div>
+            
+            <!--             <a href="#top" class="top-link">▲ 目次に戻る</a> -->
+        </div>
+        
+        <div class="section" id="references">
+            <div class="section-title">参照文献表</div>
+            <div class="section-subtitle">本研究に関連する主要文献</div>
+            
+            <div class="section-header">
+                <span class="section-icon">📚</span>
+                <h3>一次資料（パピルス・文書集）</h3>
+            </div>
+            
+            <ul>
+                <li>P. CLT = Schiller, Arthur. <i>Ten Coptic Legal Texts</i>. 1932.</li>
+                <li>P. KRU = Till, Walter C. <i>Koptische Rechtsurkunden der Ptolemäerzeit</i>. 1935.</li>
+                <li>P. Lond. = British Museum Papyrus Collections. Various, ongoing.</li>
+                <li>P. Mich. = Michigan Papyri. Various, ongoing.</li>
+                <li>P. Mon. Epiph. = Crum, W. E. and G. Steindorff. <i>The Monastery of Epiphanius at Thebes</i>. 1926.</li>
+            </ul>
+            
+            <div class="section-header">
+                <span class="section-icon">📖</span>
+                <h3>研究書・論文</h3>
+            </div>
+            
+            <ul>
+                <li>Hagedorn, Dieter. <i>Coptic Legal Documents of the Fatimid and Ayyubid Periods</i>. 1978.</li>
+                <li>Kahle, Paul E. <i>Bala'izah: Coptic Texts from Deir El-Bala'izah</i>. 1954.</li>
+                <li>Keenan, James G. "Byzantine Egyptian Land Law and the Coptic Legal Tradition." 1980.</li>
+                <li>Kruse, Thomas. "Coptic Contracts of Sale and Lease." 2005.</li>
+                <li>Massa, Lorenzo. <i>The Oath in Coptic Legal Documents</i>. 2018.</li>
+                <li>Papaconstantinou, Arietta. <i>Coptic Legal and Administrative Documents from Theban and Oxyrhynchite Monasteries</i>. 2001.</li>
+                <li>Schenke, Gesa. <i>Coptic Legal and Documentary Texts from the Monastery of Apollo at Bawit</i>. 2017.</li>
+                <li>Sijpesteijn, Petra M. <i>Shaping a Muslim State: The World of a Mid-Eighth-Century Egyptian Official</i>. 2013.</li>
+                <li>Walters, C. C. <i>Monastic Archaeology in Egypt</i>. 1989.</li>
+                <li>Wipszycka, Ewa. <i>Economic Life in Byzantine Egypt</i>. 2011.</li>
+                <li>Dosoo, Korshi. "Ritual Power: Using Curses in the Coptic Magic." 2019.</li>
+            </ul>
+            
+            <!--             <a href="#top" class="top-link">▲ 目次に戻る</a> -->
+        </div>
+        
+      
+            
+            <!--             <a href="#top" class="top-link">▲ 目次に戻る</a> -->
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 モナ・サウィ博士 ＆ 宮川奏博士 | アスユート大学（エジプト）・筑波大学（日本）</p>
+            <p>本研究はエジプト・日本共同研究プロジェクト「コプト語文書の法的・宗教的側面」の一環として実施されました</p>
+        </div>
+</body>
+</html>
+
